@@ -14,7 +14,7 @@ export const api = {
 };
 
 export default {
-	fetch: async (req, env) => { 
+	fetch: async (req, env) => {  
 		const { hostname, pathname, search } = new URL(req.url);
 
 		// resolve our chained parameters.
