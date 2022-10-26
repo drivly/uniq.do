@@ -1,0 +1,14 @@
+{
+	"main": "dist/index.mjs",
+	"module": "dist/index.mjs",
+	"scripts": {
+		"build": "esbuild worker.js --bundle --format=esm --outfile=dist/index.mjs",
+		"dev": "npx miniflare@latest --watch",
+		"format": "prettier --write '**/*.{js,css,json,md}'"
+	},
+	"dependencies": {
+		"cfw-easy-utils": "^1.0.3",
+		"esbuild": "^0.15.11",
+		"prettier": "^2.7.1"
+	}
+}
