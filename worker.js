@@ -20,7 +20,7 @@ export default {
 		// resolve our chained parameters.
 		// e.g. https://uniq.do/pluck.do/Person/
 		const [_,prop, ...rest] = pathname.split('/')
-		const url = 'https://' + rest.join('/')
+		const url = 'https://' + rest.join('/') + search
 
 		const data = await fetch(url, req).then(res => res.json()).catch(({ name, message, stack }) => ({ error: { name, message, stack }}))
 
